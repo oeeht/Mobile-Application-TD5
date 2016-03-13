@@ -98,6 +98,8 @@ public class SearchActivity extends Activity {
                                     long id) {
                 Intent intent = new Intent(getApplicationContext(), PlayerActivity.class);
                 intent.putExtra("VIDEO_ID", searchResults.get(pos).getId());
+                intent.putExtra("VIDEO_TIT", searchResults.get(pos).getTitle());
+                intent.putExtra("VIDEO_DESC", searchResults.get(pos).getDescription());
                 startActivity(intent);
             }
 
